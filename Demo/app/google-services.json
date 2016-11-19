@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "181560369530",
+    "firebase_url": "https://fir-77e82.firebaseio.com",
+    "project_id": "fir-77e82",
+    "storage_bucket": "fir-77e82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181560369530:android:c75610ec1f965715",
+        "android_client_info": {
+          "package_name": "com.gangofseven.labs.app.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "181560369530-88c0g60kphpr69qeltmvtm7t563ck89k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnmPG6RqQKb_bjRnxLd_PdYl3JTIifNsg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
