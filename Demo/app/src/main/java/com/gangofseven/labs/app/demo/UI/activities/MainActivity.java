@@ -1,5 +1,6 @@
-package com.gangofseven.labs.app.demo;
+package com.gangofseven.labs.app.demo.UI.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,8 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.gangofseven.labs.app.demo.DatabaseUtil;
+import com.gangofseven.labs.app.demo.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -16,16 +22,40 @@ public class MainActivity extends AppCompatActivity {
     private Button create;
     private EditText cardNumber;
     // Write a message to the database
-    private FirebaseDatabase database = FirebaseDatabase.getInstance();
-    private DatabaseReference myRef = database.getReference("message");
+    private FirebaseDatabase mDatabase;
+    private DatabaseReference myRef;
+
+    @BindView(R.id.button2) Button bJuan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mDatabase = DatabaseUtil.getDatabase();
+        myRef = mDatabase.getReference("message");
+
         //Initialize
         initCreateNumber();
+        ButterKnife.bind(this);
+
+        //Button bJuan = (Button) findViewById(R.id.button2);
+        bJuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openJuan();
+            }
+        });
+
+
+
+    }
+
+
+    private void openJuan(){
+
+        Intent intent = new Intent(MainActivity.this, JuanActivity.class);
+        startActivity(intent);
     }
 
     private void initCreateNumber(){
@@ -42,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
 
     }
 

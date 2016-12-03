@@ -1,10 +1,10 @@
 package com.gangofseven.labs.app.demo;
 
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.gangofseven.labs.app.demo.UI.activities.MainActivity;
 
 import gr.net.maroulis.library.EasySplashScreen;
 
