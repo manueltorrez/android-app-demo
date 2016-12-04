@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button create;
+    @BindView(R.id.create) Button create;
     private EditText cardNumber;
     // Write a message to the database
     private FirebaseDatabase mDatabase;
@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initCreateNumber(){
-        create = (Button) findViewById(R.id.create);
         cardNumber = (EditText) findViewById(R.id.card_number);
 
         create.setOnClickListener(new View.OnClickListener() {
